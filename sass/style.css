@@ -166,10 +166,10 @@ body {
 
 @media (min-width: 768px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 10px 32px;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -195,6 +195,7 @@ body {
   }
   .article__content--data {
     font-size: 1.2rem;
+    padding-bottom: 2rem;
   }
   .article__content h1 {
     font-size: 4rem;

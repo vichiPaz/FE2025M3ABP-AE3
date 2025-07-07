@@ -62,6 +62,15 @@ body {
   color: #d3d3d3;
   text-align: start;
 }
+.article__content--data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #d3d3d3;
+  padding-bottom: 1rem;
+}
 .article__content h1 {
   font-family: "Young Serif", serif;
   font-size: 3.5rem;
@@ -71,13 +80,13 @@ body {
 .article__content--text {
   font-size: 1.3rem;
   line-height: 1.5;
-  padding: 5rem 0;
+  padding: 8rem 30rem 8rem 0;
 }
 .article__content--quote {
   font-size: 1.1rem;
   font-style: italic;
   color: #0ce825;
-  padding: 12px 0;
+  padding: 3rem 0;
 }
 
 .model {
@@ -158,6 +167,15 @@ body {
 }
 
 @media (min-width: 768px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
   .hero__image {
     height: 600px;
     width: 100%;
@@ -166,9 +184,19 @@ body {
     margin-bottom: 2rem;
   }
   .hero__image img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 72vh;
     object-fit: cover;
+    z-index: -1;
+  }
+  .article__content {
+    padding: 0 10%;
+  }
+  .article__content--data {
+    font-size: 1.2rem;
   }
   .article__content h1 {
     font-size: 4rem;
@@ -179,7 +207,7 @@ body {
   }
   .article__content--quote {
     font-size: 2.1rem;
-    text-align: center;
+    text-align: right;
   }
   .gallery__pictures {
     display: flex;
@@ -199,7 +227,6 @@ body {
   .footer__content {
     align-items: center;
     padding: 2rem 5rem;
-    font-size: 1.1rem;
   }
   .footer .footer__social {
     gap: 3rem;

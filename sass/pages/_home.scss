@@ -1,0 +1,223 @@
+@use "../abstracts/variables" as vars;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap");
+
+body {
+  font-family: vars.$font-base;
+  background-color: vars.$color-bg;
+  color: vars.$color-text;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  background-color: vars.$color-bg;
+  border-bottom: 1px solid vars.$border-light;
+
+  &__logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: vars.$color-text;
+      &:hover {
+        color: vars.$color-accent;
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 2rem;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+  &__content {
+    padding: 0 18%;
+    color: vars.$color-muted;
+    text-align: start;
+    & h1 {
+      font-family: vars.$font-heading;
+      font-size: 3.5rem;
+      margin-bottom: 5rem;
+      letter-spacing: 2px;
+    }
+    &--text {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      padding: 5rem 0;
+    }
+    &--quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: vars.$color-accent;
+      padding: 12px 0;
+    }
+  }
+}
+
+.model {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 3rem;
+  iframe {
+    border: 1px solid vars.$color-text;
+    border-radius: 8px;
+    width: 65vw;
+    height: 600px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  &__title {
+    text-align: center;
+    font-family: vars.$font-heading;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  &__pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__item {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: vars.$color-bg;
+  border-top: 1px solid vars.$border-light;
+  margin-top: 3rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+
+    .footer__social {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: vars.$color-text;
+        &:hover {
+          color: vars.$color-accent;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (min-width: 768px) {
+  .hero__image {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 2rem;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article__content h1 {
+    font-size: 4rem;
+    margin-bottom: 6rem;
+  }
+  .article__content--text {
+    font-size: 1.8rem;
+  }
+  .article__content--quote {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  .gallery__pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-item {
+      height: 500px;
+      width: 400px;
+      gap: 30px;
+    }
+  }
+
+  .footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+
+    &__content {
+      align-items: center;
+      padding: 2rem 5rem;
+      font-size: 1.1rem;
+    }
+
+    .footer__social {
+      gap: 3rem;
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

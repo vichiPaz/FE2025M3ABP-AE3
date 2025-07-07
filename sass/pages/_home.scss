@@ -61,29 +61,28 @@ body {
   &__content {
     padding: 0 18%;
     color: vars.$color-muted;
-    text-align: start;
+
     &--data {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #d3d3d3;
       padding-bottom: 1rem;
     }
-    & h1 {
+    &--title {
       font-family: vars.$font-heading;
       font-size: 3.5rem;
-      margin-bottom: 5rem;
       letter-spacing: 2px;
     }
     &--text {
       font-size: 1.3rem;
       line-height: 1.5;
-      padding: 8rem 30rem 8rem 0;
+      padding: 5rem 0;
     }
     &--quote {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       font-style: italic;
       color: vars.$color-accent;
       padding: 3rem 0;
